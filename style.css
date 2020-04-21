@@ -1,0 +1,104 @@
+body {
+	font-family: 'Karla', sans-serif;
+}
+
+/*! Div Overlay Parent Format Styling*/
+#parent {
+	position: relative;
+}
+/*! Start Screen Overlay Div Format Styling*/
+#overlaystart {
+	position: absolute;
+	top: 0;
+	background-color: white;
+	z-index: 10;
+	height: 500px;
+	border-radius: 40px;
+}
+
+/*! Start Screen Header Text Format Styling*/
+#starttextarea {
+	text-align: center;
+	font-weight: 700;
+}
+
+#startsubtextarea {
+	text-align: center;
+	font-weight: 400;
+}
+
+/*! Question Overlay Div Format Styling*/
+#overlayquestions:not(button) {
+	position: absolute;
+	top: 0;
+	background-color: white;
+	z-index: 8; /*! Need to reset to 9 once page is completed*/
+	height: 500px;
+	border-radius: 40px;
+}
+
+/*#overlayquestions < div {
+	border-radius: 40px;
+}
+
+/*! Start Screen Header Text Format Styling*/
+#questiontextarea {
+	text-align: left;
+	padding-left: 50px;
+	font-weight: 700;
+}
+
+#overlayquestions.hidden {
+	display: none;
+}
+
+#questionsubtextarea {
+	text-align: left;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+#ansreturnsubtextarea {
+	font-weight: 400;
+}
+
+/*! Submit Score Overlay Div Format Styling*/
+#overlaysubmitscore {
+	position: absolute;
+	top: 0;
+	background-color: white;
+	z-index: 7; /*! Need to reset to 7 once page is completed*/
+	height: 500px;
+	border-radius: 40px;
+}
+/*! Score Text Screen Text Format Styling*/
+#scoretextarea {
+	text-align: center;
+	font-weight: 700;
+}
+
+/*! Submit Score Screen Header Text Format Styling*/
+#submittextarea {
+	text-align: center;
+	font-weight: 700;
+}
+/*! Submit Score Screen Subheader Text Format Styling*/
+#submitsubheader {
+	text-align: center;
+	font-weight: 600;
+}
+
+/*! Leaderboard Score Overlay Div Format Styling*/
+#overlayleaderboardsubmitscore {
+	position: absolute;
+	top: 0;
+	background-color: white;
+	z-index: 6; /*! Need to reset to 6 once page is completed*/
+	height: 500px;
+	border-radius: 40px;
+}
+
+/*! Leaderboard Score Screen Header Text Format Styling*/
+#leaderboardtextarea {
+	text-align: center;
+}

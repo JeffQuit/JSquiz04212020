@@ -1,0 +1,185 @@
+Psuedocode for Homework 4 Quiz Application
+
+Requirements: responsive design - use bootstrap
+
+App initializes on start page
+
+START PAGE: start page details the coding quize title and: has the timer set to 0 has the high score link in the top right has button in the center to start the quiz
+
+When start button is clicked the quiz is started: and the timer starts decrementing from 100 seconds
+
+The application will cycle through 10 multiple choice questions blocks
+
+Each question block will have 4 buttons, one will be the correct answer Each question will be woth 10 points for a total of 100 points
+
+When the buttons is pressed: The application will indicate if the button pressed was the correct answer or incorrect answer The application will log the score if the correct button is pressed The
+application will advance to the next question
+
+The application will loop through the 10 questions.
+
+Once all quesitons have been answered or the time runs out, the application will advance to the score page The score page will also ask for the user's name to submit to the high score page
+
+The high score page will have two buttons. One to clear the high score One to go back to the start of the quiz application
+
+Sections:
+
+TIMER: Starts when Start Quiz button is clicked. 
+Stops when Q10 is answered and brought to log score page or if user clicks the link for the high score page. 
+Resets if user clicks button to retake
+quiz Decrements from 100 seconds Located in the top-right of the app
+if timer reaches 0 before quiz is over, user is taken to log score page
+
+View Highscores Link: Located in top-right. Stops clock if pressed mid quiz.
+
+Score Keeper: Set variable early for loggedScore. 
+loggedScore increments when correct answer is pressed logged score prints to page after question 10 is submitted variable is pushed into an array forHigh Score page
+
+Question Block Format:
+10 question blocks either stored in JS as createElement or stored in the HTML, trigered by hide functions 
+4 buttons, 1 correct 3 wrong 
+1 correct button advances to next question block, runs functionto increments score, displays message "Correct!" 
+3 incorrect buttons advances to next question block, does not run function to increment score, displays message "incorrect!"
+H1 - Question 
+Buttons - 4 
+
+
+Question Block Advancer Loop/function
+Store questions in an array 
+Reference Array information to textContent 
+
+
+Log Score Page:
+Page that prints score and has text field w/ submit button for user to log their score to the High Score page
+pushes object [score: XYZ, Name: Jeff] to high score array
+use localStorage.setItem to log value to local
+
+High Score Page:
+Displays High Score array in descending order by Score value 
+Clear Score button - clears array of High Score
+Retake Quiz button - Takes user back to the Start page and resets clock and score value
+localStorage.getItem to retreive from local
+Local Storage 
+
+
+
+variables/Arrays needed:
+quizTimer - Timer that is set to 0 but counts down from 100
+quizScoreCounter - Varaible that is set to 0 and increments based on answered questions
+scoreRanking - Array that logs completed quiz scores with properties of Score: XYZ and Name: Jeff
+questionBankArray - [QuestionIndex: , QuestionTitle: , QuestionAnswers:[] ]
+
+Functions Needed:
+Score Incrementer
+Time Decrementer
+Question Retreiver
+start quiz - triggeres on click of start button | starts time decrementer
+
+
+Steps:
+Get Questions to populate into question div
+Get answers to populate into div
+Get questions to advance when answer is selected
+Get this action to happen 10 times
+Get Correct/Incorrect to show depending on what is selected
+Get Score/Time to be affected by answer
+After 10th question, hid question div, stop clock, show score 
+After name is submitted, log data to local and hide submit div
+Populate leaderboard from local and order by highest score
+Set functionality for clear high score button
+set functionality for reset button
+
+
+Quizblock 10 question array
+Event Delegation - Activity 18
+const questionBankArray = 
+[{
+    question: 'Who is credited with inventing Javascript?',
+    answers: [
+      { text: 'Brendan Eich', correct: true },
+      { text: 'Linus Torvalds', correct: false },
+      { text: 'Alan Turing', correct: false },
+      { text: 'Lawrence Joseph Ellison', correct: false }
+    ]
+  },
+  {
+    question: 'What Javascript Method is used to store information to local storage?',
+    answers: [
+      { text: 'browserStorage.setItem()', correct: false },
+      { text: 'browserStorage.getItem(), correct: false },
+      { text: 'localStorage.getItem()', correct: false },
+      { text: 'localStorage.setItem()', correct: true }
+    ]
+  },
+    {
+    question: 'What Javascript Method is used to create a new array that contains elements that have passed a certain criteria check?',
+    answers: [
+      { text: '.join()', correct: false },
+      { text: '.map()', correct: false },
+      { text: '.filter()', correct: true },
+      { text: '.push()', correct: false }
+    ]
+  },
+    {
+    question: 'What type of Javascript data type is represented by placing information inside of an open and closed square bracket?',
+    answers: [
+      { text: 'String', correct: false },
+      { text: 'Boolean', correct: false },
+      { text: 'Number', correct: false },
+      { text: 'Array', correct: true }
+    ]
+  },
+    {
+    question: 'An alternate way to code an If statement is?',
+    answers: [
+      { text: 'This', correct: false },
+      { text: 'Prototype', correct: false },
+      { text: 'For', correct: false },
+      { text: 'Switch ', correct: true }
+    ]
+  },
+    {
+    question: 'The operator i++ is known as an?,
+    answers: [
+      { text: 'Increment', correct: true },
+      { text: 'Decrement', correct: false },
+      { text: 'Institute', correct: false },
+      { text: 'Destitute', correct: false }
+    ]
+  },
+    {
+    question: 'What tag would you use in HTML to link to an outside Javascript page?',
+    answers: [
+      { text: 'Launch Tag', correct: false },
+      { text: 'Connect Tag', correct: false },
+      { text: 'Script Tag', correct: true },
+      { text: 'IMG Tag', correct: false }
+    ]
+  },
+    {
+    question: 'A block of code designed to perform a particular task is also known as?',
+    answers: [
+      { text: 'Method', correct: false },
+      { text: 'Variable', correct: false },
+      { text: 'Array', correct: false },
+      { text: 'Function', correct: true }
+    ]
+  },
+    {
+    question: 'What is the current release version of Javascript?',
+    answers: [
+      { text: 'ES6 aka ECMAScript 6', correct: true },
+      { text: 'ES5 aka ECMAScript 5', correct: false },
+      { text: 'ES4 aka ECMAScript 4', correct: false },
+      { text: 'ES3 aka ECMAScript 3', correct: false }
+    ]
+  },
+    {
+    question: 'The var variable format can also be written as?',
+    answers: [
+      { text: 'set', correct: false },
+      { text: 'store', correct: false },
+      { text: 'let', correct: true },
+      { text: 'have', correct: false }
+    ]
+  }
+]
