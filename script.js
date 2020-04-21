@@ -185,7 +185,7 @@ function sendMessage() {
 	mainEl.appendChild(imgEl);
 }
 
-function populateQuestions(question) {
+function populateQuestions() {
 	for (let i = 0; i < questionBankArray.length; i++) {
 		console.log(i);
 		questionTextInsert.innerText = questionBankArray[i].question;
