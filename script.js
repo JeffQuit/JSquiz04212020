@@ -158,7 +158,17 @@ function hideStartDiv() {
 		x.style.display = 'none';
 	}
 	setTime();
-	populateQuestions();
+	nextQuestion();
+}
+
+function hideQuestionDiv() {
+	let l = document.getElementById('overlayquestions');
+	if (l.style.display === 'none') {
+		l.style.display = 'block';
+	} else {
+		l.style.display = 'none';
+	}
+	populateScore();
 }
 
 //Timer from activity 8
@@ -171,32 +181,35 @@ function setTime() {
 		if (secondsLeft === 0) {
 			clearInterval(timerInterval);
 			timeEl.textContent = 'Remaining Time: 0';
-			sendMessage();
+			timeIsZero();
 		}
 	}, 1000);
 }
 
-function sendMessage() {
+function timeIsZero() {
 	timeEl.textContent = 'Remaining Time: 0';
-
-	let imgEl = document.createElement('img');
-
-	imgEl.setAttribute('src', 'images/image_1.jpg'); //! Need to change this to alert time is up and to go to the end of the quiz
-	mainEl.appendChild(imgEl);
+	//! Need to change this to alert time is up and to go to the end of the quiz
 }
 
-function populateQuestions() {
+function nextQuestion() {
+	if (i < questionBankArray.length) {
+		populateQuestions(questionBankArray[i]);
+	} else {
+	}
+}
+
+function populateQuestions(questionset) {
 	for (let i = 0; i < questionBankArray.length; i++) {
 		console.log(i);
-		questionTextInsert.innerText = questionBankArray[i].question;
-		ansBtn1.innerText = questionBankArray[i].answers[0].text;
-		ansBtn2.innerText = questionBankArray[i].answers[1].text;
-		ansBtn3.innerText = questionBankArray[i].answers[2].text;
-		ansBtn4.innerText = questionBankArray[i].answers[3].text;
-		console.log(questionBankArray[i].answers[0].correct);
-		console.log(questionBankArray[i].answers[1].correct);
-		console.log(questionBankArray[i].answers[2].correct);
-		console.log(questionBankArray[i].answers[3].correct);
+		questionTextInsert.innerText = questionset.question;
+		ansBtn1.innerText = questionset.answers[0].text;
+		ansBtn2.innerText = questionset.answers[1].text;
+		ansBtn3.innerText = questionset.answers[2].text;
+		ansBtn4.innerText = questionset.answers[3].text;
+		console.log(questionset.answers[0].correct);
+		console.log(questionset.answers[1].correct);
+		console.log(questionset.answers[2].correct);
+		console.log(questionset.answers[3].correct);
 	}
 }
 
@@ -208,6 +221,11 @@ function answerQuestionAction(ans) {
 	} else {
 		console.log('Answer is False');
 	}
+	nextQuestion();
+}
+
+function populateScore() {
+	scoreSave.innerText = scoreKeeper;
 }
 
 /*
