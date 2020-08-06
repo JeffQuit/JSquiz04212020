@@ -4,11 +4,9 @@ Author: Jeff Quittman Project: P#4 - Javascript Quiz Application Date: April 202
 
 ## Description:
 
-Fourth project for the UCLA/Trilogy Full Stack Boot Camp that tasks the student with building a quiz application in Javascript. The quiz is initiated by a start button which then starts a countdown
-clock of 100 seconds. The quiz taker has 100 seconds to complete the quiz or it takes them to the submit score page to submit their current score. The score starts at 0 and each correct question is
-worth 10 points. On the other hand, any incorrect answer deducts 10 seconds from the time left. When the quiz is completed by all questions being answered or the time running out, the user will have
-to submit their name and the score they received to a leaderboard. At the leaderboard page, they can decided to clear the high scores or re-take the quiz. At anytime, the user can check the
-leaderboard by clicking the leaderboard button in the top-right hand side of the page.
+Fourth project for the UCLA/Trilogy Full Stack Boot Camp that tasks the student with building a quiz application in Javascript. The quiz is initiated by a start button which then starts a countdown clock of 100 seconds. The quiz taker has 100 seconds to complete the quiz or it takes them to the
+submit score page to submit their current score. The score starts at 0 and each correct question is worth 10 points. On the other hand, any incorrect answer deducts 10 seconds from the time left. When the quiz is completed by all questions being answered or the time running out, the user will have
+to submit their name and the score they received to a leaderboard. At the leaderboard page, they can decided to clear the high scores or re-take the quiz. At anytime, the user can check the leaderboard by clicking the leaderboard button in the top-right hand side of the page.
 
 The HTML is mostly made in bootstrap with some additional CSS styles on the style.css page included.
 
@@ -28,11 +26,11 @@ Style.css - CSS file that contains the additional styles for the application
 
 ## Installation:
 
-Access Index.html via the URL https://github.com/JeffQuit/JSquiz04212020 No additional steps necessary to navagate the website
+Access Index.html via the URL https://jeffquit.github.io/JavaScript---Quiz-Application/ No additional steps necessary to navagate the website
 
 ## Additional Links
 
-Github Repo Link: https://github.com/JeffQuit/JSquiz04212020
+Github Repo Link: https://github.com/JeffQuit/JavaScript---Quiz-Application
 
 ## Authors:
 
