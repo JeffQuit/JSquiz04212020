@@ -14,7 +14,7 @@ The HTML is mostly made in bootstrap with some additional CSS styles on the styl
 
 ## Demo
 
-<img src="/DemoImgs/JSquiz.gif?raw=true">
+<img src="/DemoImgs/JSQuiz2.gif?raw=true">
 
 ## Contents:
 
