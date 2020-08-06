@@ -216,11 +216,11 @@ function saveHighScore() {
 		return;
 	}
 	// Sorts Array Leaderboard to show in descending order.
-	leaderboardArray.sort(function (a, b) {
+	localLeaderBoard.sort(function (a, b) {
 		return b.score - a.score;
 	});
 
-	for (let k = 0; k < leaderboardArray.length; k++) {
+	for (let k = 0; k < localLeaderBoard.length; k++) {
 		let listElement = document.createElement('li');
 		listElement.textContent = leaderboardArray[k].name;
 		leaderboardListUl.append(listElement);
@@ -244,6 +244,7 @@ nameScoreSubmitBtn.addEventListener('click', function (event) {
 		name: nameScoreValue.value.trim(),
 		score: scoreSave.innerText.trim(),
 	};
+
 	leaderboardArray.push(nameScore);
 	localStorage.setItem('leaderboardArray', JSON.stringify(leaderboardArray));
 	console.log(leaderboardArray);

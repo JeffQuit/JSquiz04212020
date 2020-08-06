@@ -12,6 +12,10 @@ leaderboard by clicking the leaderboard button in the top-right hand side of the
 
 The HTML is mostly made in bootstrap with some additional CSS styles on the style.css page included.
 
+## Demo
+
+<img src="/DemoImgs/JSquiz.gif?raw=true">
+
 ## Contents:
 
 Index.html - Main Index HTML page for the quiz application.
